@@ -1,10 +1,16 @@
+
 import data from "../../data/data";
+
 import Dental from "./Dental";
 
+
 const ServicesFilter = () =>{
+  
+  
     return (
-        <div>  
-        {data.map(dent => <Dental dent={dent}/>)}
+        <div className="dental_cont">
+            
+        {data.map(dent => <Dental key={dent.id} dent={dent}/>)}
         </div>
     )
 }

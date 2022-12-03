@@ -4,9 +4,10 @@ body {
 .App {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
- }
+  }
 .iter {
   width: 150px;
 }
@@ -17,23 +18,150 @@ body {
 h1 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  font-size: calc(24px + 16*(100vw/1980));
+  letter-spacing: 5px;
+  color:#695749
+}
+.allCategories {
+  color: #71686B;
+  font-size: calc(15px + 5 * (100vw/1980));
+  letter-spacing: 5px;
+  padding: 20px;
+  margin: 10px;
 }
 .content {
-  margin: 10px;
+  margin: 20px;
   padding: 20px;
-}
+  flex: 1;
+ }
 .vector {
-  width: 300px;
-  height: 300px;
+  width: 60%;
+  height: 60%;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+}
+h3 {
+  font-size: calc(10px + 10*(100vw/1980));
+  letter-spacing: 5px;
+  color: #71686B;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .categoryButton:hover {
   background-color: #FECF92;;
 }
 .categoryButtonSelected {
   background-color: #DAF0FF;
+  font-weight: bold;
 }
 .categoryButton {
   cursor: pointer;
   margin: 5px;
   padding: 5px;
 }
+.btn {
+  margin: 5px;
+  font-size: 20px;
+  border: none;
+  color:#e4785b;
+  background-color: transparent;
+
+}
+.cart_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.cart_container {
+  margin-top: 70px;
+  border: 2px solid #DAF0FF;
+  width: 80%;
+  box-shadow: 2px 5px 10px 2px rgba(26, 71, 105, 0.351);
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 50px;
+}
+.cart_par {
+ flex: 1;
+ padding: 5px;
+}
+.cart_parOne {
+  width: 40%;
+  margin-right: 20px;
+}
+.cart_btn {
+  border: none;
+  background-color: #e4785b;
+  color: white;
+  font-size: calc(10px + 10*(100vw/1980));
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.332);
+  cursor: pointer;
+  width: 20%;
+}
+.cart_btn:active {
+  background-color: #e4795bcf;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+.cart_btn:hover {
+  font-weight: bold;
+}
+
+.cart_services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  }
+  hr {
+    border:1px solid #DAF0FF;
+    background-color: #DAF0FF;
+  }
+  .none {
+    padding: 15px;
+   
+  }
+  .icon {
+    width: 20px;
+    margin-right: 5px;
+  }
+  .par_header{
+    color: #695749;
+    font-size: calc(12px + 10*(100vw/1920));
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  .cart_service {
+    font-size: calc(10px + 8*(100vw/1980));
+    color: #71686B;
+  }
+  .dental_cont {
+    font-size: calc(10px + 10*(100vw/1980));
+    color: #695749;
+  }
+
+  
+  @media all and (max-width: 767px) {
+    h1 {
+      font-size: calc(24px + (16+16*0.7)*((100vw-280px)/1980));
+    }
+    .allCategories {
+     width: 100%;
+     }
+  }
+
+  @media all and (max-width: 450px) {
+    .cart_container {
+      width: 100%;
+      margin-left: 0px;
+    }
+    .allCategories {
+      margin: 5px;
+      letter-spacing: 2px;
+      }
+      h1 {
+        letter-spacing: 2px;
+      }
+  }
