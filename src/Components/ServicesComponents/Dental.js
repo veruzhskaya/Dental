@@ -9,7 +9,6 @@ const Dental = ({dent}) =>{
 
     return (
         <div>
-           
             <p>{dent.serviceName}</p>
             <p>{dent.price} руб.</p>
             <ChangeQuantity quantity ={quantity} setQuantity = {setQuantity}/>

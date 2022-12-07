@@ -20,7 +20,7 @@ const Cart = () => {
             </div>
                 <hr/>
             <div>
-                {cartItems.map(cartItem => <CartItem cartItem = {cartItem}/>)}
+                {cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem = {cartItem}/>)}
             </div> 
             <div className="cart_content">
             <div className="cart_par">
